@@ -8,7 +8,7 @@ Update this file when you learn something that would help future iterations.
 ### Recipe ingest is delegated to the `claude-runner` sidecar
 
 `/api/import` is a thin proxy. It does not parse HTML, does not build PR
-trees, and does not talk to GitHub. It forwards to `http://claude-runner:8080`
+trees, and does not talk to GitHub. It forwards to `http://wachter-claude-runner:8080`
 on the implicit Docker Compose network. The structured-extraction and
 PR-creation logic lives in `sidecar/claude-runner/SYSTEM_PROMPT.md`, which
 is the load-bearing artifact — version it deliberately.
@@ -39,7 +39,7 @@ URL-imported images stay as URLs the sidecar `curl`s.
 
 The cookbook is deployed as a single Dokploy app pointing at this repo's
 `docker-compose.yml`. That compose defines two services — the cookbook
-itself and the `claude-runner` sidecar — and they share an implicit
+itself (`wachter-table`) and the `wachter-claude-runner` sidecar — and they share an implicit
 network plus a `/uploads` volume.
 
 In Dokploy:
@@ -84,4 +84,4 @@ needs it. To exercise the full flow locally, `cp .env.example .env`, fill in
 
 ### Import sidecar exits before Claude receives its request
 
-If `POST /api/import?stage=preview` returns a 502 whose detail says `claude exited 1` and `no stdin data received in 3s`, the deployed `claude-runner` is failing before extraction rather than rejecting the recipe URL. The cookbook content can still be added manually as a short-term recovery, but the sidecar invocation needs its stdin handling fixed before relying on URL imports again.
+If `POST /api/import?stage=preview` returns a 502 whose detail says `claude exited 1` and `no stdin data received in 3s`, the deployed `wachter-claude-runner` is failing before extraction rather than rejecting the recipe URL. The cookbook content can still be added manually as a short-term recovery, but the sidecar invocation needs its stdin handling fixed before relying on URL imports again.
