@@ -1,0 +1,1332 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Submit a Recipe"
+  description="Share your favorite recipe with The Wachter Table community"
+>
+  <section class="bg-gradient-to-b from-ctp-mantle to-ctp-base py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-ctp-text mb-4">
+        Submit a <span class="text-ctp-mauve">Recipe</span>
+      </h1>
+      <p class="text-lg text-ctp-subtext1 max-w-2xl mx-auto">
+        Share your favorite dish with our community. Fill out the form below and
+        we'll review your submission.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <form
+      id="recipe-form"
+      class="space-y-8 bg-ctp-surface0 rounded-2xl p-6 md:p-8 border border-ctp-surface1"
+    >
+      <!-- Import from URL Section -->
+      <div class="space-y-4">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-sapphire/20 text-ctp-sapphire flex items-center justify-center text-sm font-bold"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+              ></path>
+            </svg>
+          </span>
+          Import from URL
+        </h2>
+
+        <div class="flex gap-3">
+          <input
+            type="url"
+            id="import_url"
+            placeholder="https://example.com/recipe"
+            class="flex-1 px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-sapphire focus:outline-none focus:ring-1 focus:ring-ctp-sapphire transition-colors"
+          />
+          <button
+            type="button"
+            id="import-btn"
+            class="px-6 py-3 bg-ctp-sapphire hover:bg-ctp-sapphire/90 text-ctp-base font-bold rounded-xl transition-colors flex items-center gap-2"
+          >
+            <svg
+              id="import-icon"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+              ></path>
+            </svg>
+            <svg
+              id="import-spinner"
+              class="w-5 h-5 animate-spin hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            <span id="import-btn-text">Import</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="relative">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-ctp-surface2"></div>
+        </div>
+        <div class="relative flex justify-center">
+          <span class="px-4 bg-ctp-surface0 text-sm text-ctp-overlay0"
+            >or enter manually</span
+          >
+        </div>
+      </div>
+
+      <!-- Basic Info Section -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-mauve/20 text-ctp-mauve flex items-center justify-center text-sm font-bold"
+            >1</span
+          >
+          Basic Information
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label
+              for="author_name"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Your Name <span class="text-ctp-red">*</span></label
+            >
+            <input
+              type="text"
+              id="author_name"
+              name="author_name"
+              required
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="Jane Doe"
+            />
+          </div>
+
+          <div>
+            <label
+              for="title"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Recipe Title <span class="text-ctp-red">*</span></label
+            >
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="Grandma's Famous Lasagna"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            for="description"
+            class="block text-sm font-medium text-ctp-subtext1 mb-2"
+            >Description <span class="text-ctp-red">*</span></label
+          >
+          <textarea
+            id="description"
+            name="description"
+            required
+            rows="3"
+            class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors resize-none"
+            placeholder="A brief description of your recipe..."></textarea>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div>
+            <label
+              for="prep_time"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Prep Time (minutes)</label
+            >
+            <input
+              type="number"
+              id="prep_time"
+              name="prep_time"
+              min="0"
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="15"
+            />
+          </div>
+
+          <div>
+            <label
+              for="cook_time"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Cook Time (minutes)</label
+            >
+            <input
+              type="number"
+              id="cook_time"
+              name="cook_time"
+              min="0"
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="45"
+            />
+          </div>
+
+          <div>
+            <label
+              for="servings"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Servings</label
+            >
+            <input
+              type="number"
+              id="servings"
+              name="servings"
+              min="1"
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Upload Section (placeholder for 5.3) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-blue/20 text-ctp-blue flex items-center justify-center text-sm font-bold"
+            >2</span
+          >
+          Recipe Photo <span class="text-ctp-red">*</span>
+        </h2>
+
+        <div
+          id="image-upload-zone"
+          class="relative border-2 border-dashed border-ctp-surface2 rounded-xl p-8 text-center hover:border-ctp-mauve transition-colors cursor-pointer"
+        >
+          <input
+            type="file"
+            id="image"
+            name="image"
+            accept="image/jpeg,image/png,image/webp"
+            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+          />
+          <div id="upload-placeholder" class="space-y-2">
+            <svg
+              class="w-12 h-12 mx-auto text-ctp-overlay0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              ></path>
+            </svg>
+            <p class="text-ctp-subtext1">
+              <span class="text-ctp-mauve font-medium">Click to upload</span> or drag
+              and drop
+            </p>
+            <p class="text-sm text-ctp-overlay0">JPG, PNG or WebP (max 5MB)</p>
+          </div>
+          <div id="image-preview" class="hidden">
+            <img
+              id="preview-img"
+              src=""
+              alt="Preview"
+              class="max-h-48 mx-auto rounded-lg"
+            />
+            <button
+              type="button"
+              id="remove-image"
+              class="mt-2 text-sm text-ctp-red hover:underline"
+            >
+              Remove image
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tags Section (placeholder for 5.4) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-green/20 text-ctp-green flex items-center justify-center text-sm font-bold"
+            >3</span
+          >
+          Tags
+        </h2>
+
+        <div id="tag-selector" class="space-y-4">
+          <p class="text-sm text-ctp-subtext1">
+            Select tags that describe your recipe (click to toggle)
+          </p>
+          <div id="tag-pills" class="flex flex-wrap gap-2">
+            <!-- Tags will be populated by JavaScript -->
+          </div>
+          <input type="hidden" id="selected_tags" name="tags" value="" />
+        </div>
+      </div>
+
+      <!-- Source Attribution Section (placeholder for 5.5) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-peach/20 text-ctp-peach flex items-center justify-center text-sm font-bold"
+            >4</span
+          >
+          Source Attribution
+          <span class="text-sm font-normal text-ctp-overlay0">(Optional)</span>
+        </h2>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label
+              for="source_name"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Source Name</label
+            >
+            <input
+              type="text"
+              id="source_name"
+              name="source_name"
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="Mom's recipe book"
+            />
+          </div>
+
+          <div>
+            <label
+              for="source_url"
+              class="block text-sm font-medium text-ctp-subtext1 mb-2"
+              >Source URL</label
+            >
+            <input
+              type="url"
+              id="source_url"
+              name="source_url"
+              class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors"
+              placeholder="https://example.com/recipe"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Ingredients Section (placeholder for 5.6) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-pink/20 text-ctp-pink flex items-center justify-center text-sm font-bold"
+            >5</span
+          >
+          Ingredients
+        </h2>
+
+        <div id="ingredients-container" class="space-y-3">
+          <!-- Ingredient rows will be added dynamically -->
+        </div>
+
+        <button
+          type="button"
+          id="add-ingredient"
+          class="flex items-center gap-2 px-4 py-2 text-ctp-mauve hover:bg-ctp-surface1 rounded-xl transition-colors"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"></path>
+          </svg>
+          Add Ingredient
+        </button>
+      </div>
+
+      <!-- Steps Section (placeholder for 5.7) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-yellow/20 text-ctp-yellow flex items-center justify-center text-sm font-bold"
+            >6</span
+          >
+          Instructions
+        </h2>
+
+        <div id="steps-container" class="space-y-3">
+          <!-- Step rows will be added dynamically -->
+        </div>
+
+        <button
+          type="button"
+          id="add-step"
+          class="flex items-center gap-2 px-4 py-2 text-ctp-mauve hover:bg-ctp-surface1 rounded-xl transition-colors"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"></path>
+          </svg>
+          Add Step
+        </button>
+      </div>
+
+      <!-- Notes Section (placeholder for 5.8) -->
+      <div class="space-y-6">
+        <h2 class="text-xl font-bold text-ctp-text flex items-center gap-2">
+          <span
+            class="w-8 h-8 rounded-full bg-ctp-teal/20 text-ctp-teal flex items-center justify-center text-sm font-bold"
+            >7</span
+          >
+          Tips & Notes
+          <span class="text-sm font-normal text-ctp-overlay0">(Optional)</span>
+        </h2>
+
+        <textarea
+          id="notes"
+          name="notes"
+          rows="3"
+          maxlength="1000"
+          class="w-full px-4 py-3 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-xl border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors resize-none"
+          placeholder="Any helpful tips, variations, or notes about this recipe..."
+        ></textarea>
+        <p class="text-sm text-ctp-overlay0">
+          <span id="notes-count">0</span>/1000 characters
+        </p>
+      </div>
+
+      <!-- Anti-spam Section -->
+      <div class="hidden" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <!-- Math CAPTCHA -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <label for="captcha" class="text-sm font-medium text-ctp-subtext1"
+            >What is <span id="captcha-question" class="font-bold text-ctp-text"
+            ></span>? <span class="text-ctp-red">*</span></label
+          >
+          <input
+            type="number"
+            id="captcha"
+            name="captcha"
+            required
+            class="w-24 px-3 py-2 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-lg border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors text-center"
+          />
+          <input type="hidden" id="captcha_answer" name="captcha_answer" />
+        </div>
+        <p class="text-xs text-ctp-overlay0">
+          Please solve this simple math problem to help us prevent spam.
+        </p>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-4 border-t border-ctp-surface1">
+        <button
+          type="submit"
+          class="w-full md:w-auto px-8 py-4 bg-ctp-mauve hover:bg-ctp-mauve/90 text-ctp-base font-bold rounded-xl transition-colors flex items-center justify-center gap-2"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+            ></path>
+          </svg>
+          Submit Recipe
+        </button>
+      </div>
+    </form>
+  </section>
+</BaseLayout>
+
+<script>
+  // Image preview functionality
+  const imageInput = document.getElementById('image') as HTMLInputElement;
+  const uploadPlaceholder = document.getElementById('upload-placeholder');
+  const imagePreview = document.getElementById('image-preview');
+  const previewImg = document.getElementById('preview-img') as HTMLImageElement;
+  const removeImageBtn = document.getElementById('remove-image');
+
+  if (
+    imageInput &&
+    uploadPlaceholder &&
+    imagePreview &&
+    previewImg &&
+    removeImageBtn
+  ) {
+    imageInput.addEventListener('change', () => {
+      const file = imageInput.files?.[0];
+      if (file) {
+        // Validate file size (5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert('Image must be less than 5MB');
+          imageInput.value = '';
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          previewImg.src = e.target?.result as string;
+          uploadPlaceholder.classList.add('hidden');
+          imagePreview.classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    removeImageBtn.addEventListener('click', () => {
+      imageInput.value = '';
+      previewImg.src = '';
+      uploadPlaceholder.classList.remove('hidden');
+      imagePreview.classList.add('hidden');
+    });
+  }
+
+  // Notes character counter
+  const notesTextarea = document.getElementById('notes') as HTMLTextAreaElement;
+  const notesCount = document.getElementById('notes-count');
+
+  if (notesTextarea && notesCount) {
+    notesTextarea.addEventListener('input', () => {
+      notesCount.textContent = String(notesTextarea.value.length);
+    });
+  }
+
+  // Helper to create SVG elements safely
+  function createRemoveIcon(): SVGSVGElement {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'w-4 h-4');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '2');
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+
+    svg.appendChild(path);
+    return svg;
+  }
+
+  // Dynamic ingredients
+  const ingredientsContainer = document.getElementById('ingredients-container');
+  const addIngredientBtn = document.getElementById('add-ingredient');
+  let ingredientIndex = 0;
+
+  function createIngredientRow(): HTMLElement {
+    const row = document.createElement('div');
+    row.className = 'flex gap-2 items-start ingredient-row';
+
+    // Create grid container for inputs
+    const inputGrid = document.createElement('div');
+    inputGrid.className = 'flex-1 grid gap-2 grid-cols-3';
+
+    // Amount input
+    const amountInput = document.createElement('input');
+    amountInput.type = 'text';
+    amountInput.name = `ingredient_amount_${ingredientIndex}`;
+    amountInput.placeholder = 'Amount';
+    amountInput.className =
+      'px-3 py-2 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-lg border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors text-sm';
+
+    // Ingredient name input
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.name = `ingredient_name_${ingredientIndex}`;
+    nameInput.placeholder = 'Ingredient';
+    nameInput.className =
+      'col-span-2 px-3 py-2 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-lg border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors text-sm';
+
+    inputGrid.appendChild(amountInput);
+    inputGrid.appendChild(nameInput);
+
+    // Remove button
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.className =
+      'remove-ingredient p-2 text-ctp-overlay0 hover:text-ctp-red hover:bg-ctp-surface1 rounded-lg transition-colors';
+    removeBtn.setAttribute('aria-label', 'Remove ingredient');
+    removeBtn.appendChild(createRemoveIcon());
+
+    row.appendChild(inputGrid);
+    row.appendChild(removeBtn);
+
+    ingredientIndex++;
+    return row;
+  }
+
+  if (ingredientsContainer && addIngredientBtn) {
+    // Add initial ingredient row
+    ingredientsContainer.appendChild(createIngredientRow());
+
+    addIngredientBtn.addEventListener('click', () => {
+      ingredientsContainer.appendChild(createIngredientRow());
+    });
+
+    ingredientsContainer.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const removeBtn = target.closest('.remove-ingredient');
+      if (removeBtn) {
+        const row = removeBtn.closest('.ingredient-row');
+        if (row && ingredientsContainer.children.length > 1) {
+          row.remove();
+        }
+      }
+    });
+  }
+
+  // Dynamic steps
+  const stepsContainer = document.getElementById('steps-container');
+  const addStepBtn = document.getElementById('add-step');
+  let stepIndex = 0;
+
+  function createStepRow(): HTMLElement {
+    stepIndex++;
+    const row = document.createElement('div');
+    row.className = 'flex gap-2 items-start step-row';
+
+    // Step number badge
+    const numberBadge = document.createElement('span');
+    numberBadge.className =
+      'flex-shrink-0 w-8 h-8 rounded-full bg-ctp-surface1 text-ctp-text flex items-center justify-center text-sm font-bold step-number';
+    numberBadge.textContent = String(stepIndex);
+
+    // Step textarea
+    const textarea = document.createElement('textarea');
+    textarea.name = `step_${stepIndex}`;
+    textarea.rows = 2;
+    textarea.placeholder = 'Describe this step...';
+    textarea.className =
+      'flex-1 px-3 py-2 bg-ctp-base text-ctp-text placeholder-ctp-overlay0 rounded-lg border border-ctp-surface1 focus:border-ctp-mauve focus:outline-none focus:ring-1 focus:ring-ctp-mauve transition-colors text-sm resize-none';
+
+    // Remove button
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.className =
+      'remove-step p-2 text-ctp-overlay0 hover:text-ctp-red hover:bg-ctp-surface1 rounded-lg transition-colors';
+    removeBtn.setAttribute('aria-label', 'Remove step');
+    removeBtn.appendChild(createRemoveIcon());
+
+    row.appendChild(numberBadge);
+    row.appendChild(textarea);
+    row.appendChild(removeBtn);
+
+    return row;
+  }
+
+  function renumberSteps() {
+    const steps = stepsContainer?.querySelectorAll('.step-row');
+    steps?.forEach((step, index) => {
+      const number = step.querySelector('.step-number');
+      if (number) {
+        number.textContent = String(index + 1);
+      }
+      const textarea = step.querySelector('textarea');
+      if (textarea) {
+        textarea.name = `step_${index + 1}`;
+      }
+    });
+    stepIndex = steps?.length || 0;
+  }
+
+  if (stepsContainer && addStepBtn) {
+    // Add initial step row
+    stepsContainer.appendChild(createStepRow());
+
+    addStepBtn.addEventListener('click', () => {
+      stepsContainer.appendChild(createStepRow());
+    });
+
+    stepsContainer.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const removeBtn = target.closest('.remove-step');
+      if (removeBtn) {
+        const row = removeBtn.closest('.step-row');
+        if (row && stepsContainer.children.length > 1) {
+          row.remove();
+          renumberSteps();
+        }
+      }
+    });
+  }
+
+  // Tag selection
+  const AVAILABLE_TAGS = [
+    'italian',
+    'asian',
+    'mexican',
+    'mediterranean',
+    'american',
+    'french',
+    'indian',
+    'middle-eastern',
+    'breakfast',
+    'lunch',
+    'dinner',
+    'snack',
+    'dessert',
+    'appetizer',
+    'vegetarian',
+    'vegan',
+    'gluten-free',
+    'dairy-free',
+    'keto',
+    'low-carb',
+    'quick',
+    'weeknight',
+    'meal-prep',
+    'slow-cooker',
+    'comfort-food',
+    'healthy',
+    'one-pot',
+    'grilling',
+    'salad',
+    'soup',
+    'stew',
+    'chicken',
+    'beef',
+    'pork',
+    'fish',
+    'seafood',
+    'tofu',
+    'eggs',
+    'bread',
+    'cookies',
+    'cakes',
+    'pies',
+    'pastry',
+    'muffins',
+    'brownies',
+    'tarts',
+    'sourdough',
+    'no-knead',
+    'yeast-baking',
+    'quick-bread',
+    'summer',
+    'fall',
+    'winter',
+    'spring',
+    'holiday',
+  ];
+
+  const tagPillsContainer = document.getElementById('tag-pills');
+  const selectedTagsInput = document.getElementById(
+    'selected_tags'
+  ) as HTMLInputElement;
+  const selectedTags = new Set<string>();
+
+  function updatePillStyle(pill: HTMLElement, selected: boolean) {
+    if (selected) {
+      pill.className =
+        'tag-pill px-3 py-1 rounded-full text-sm border transition-colors capitalize bg-ctp-mauve/20 border-ctp-mauve text-ctp-mauve';
+    } else {
+      pill.className =
+        'tag-pill px-3 py-1 rounded-full text-sm border transition-colors capitalize bg-ctp-base border-ctp-surface1 text-ctp-subtext1 hover:border-ctp-surface2';
+    }
+  }
+
+  if (tagPillsContainer && selectedTagsInput) {
+    AVAILABLE_TAGS.forEach((tag) => {
+      const pill = document.createElement('button');
+      pill.type = 'button';
+      pill.textContent = tag.replace(/-/g, ' ');
+      pill.dataset.tag = tag;
+      updatePillStyle(pill, false);
+
+      pill.addEventListener('click', () => {
+        if (selectedTags.has(tag)) {
+          selectedTags.delete(tag);
+          updatePillStyle(pill, false);
+        } else {
+          selectedTags.add(tag);
+          updatePillStyle(pill, true);
+        }
+        selectedTagsInput.value = Array.from(selectedTags).join(',');
+      });
+
+      tagPillsContainer.appendChild(pill);
+    });
+  }
+
+  // Math CAPTCHA generation
+  const captchaQuestion = document.getElementById('captcha-question');
+  const captchaAnswerInput = document.getElementById(
+    'captcha_answer'
+  ) as HTMLInputElement;
+
+  function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    const operators = ['+', '-', '*'] as const;
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+
+    let answer: number;
+    let displayOperator: string;
+
+    switch (operator) {
+      case '+':
+        answer = num1 + num2;
+        displayOperator = '+';
+        break;
+      case '-':
+        // Ensure positive result
+        const [bigger, smaller] = num1 > num2 ? [num1, num2] : [num2, num1];
+        answer = bigger - smaller;
+        displayOperator = '-';
+        if (captchaQuestion) {
+          captchaQuestion.textContent = `${bigger} ${displayOperator} ${smaller}`;
+        }
+        if (captchaAnswerInput) {
+          captchaAnswerInput.value = String(answer);
+        }
+        const captchaInputEarly = document.getElementById(
+          'captcha'
+        ) as HTMLInputElement;
+        if (captchaInputEarly) captchaInputEarly.value = '';
+        return;
+      case '*':
+        answer = num1 * num2;
+        displayOperator = '×';
+        break;
+    }
+
+    if (captchaQuestion) {
+      captchaQuestion.textContent = `${num1} ${displayOperator} ${num2}`;
+    }
+    if (captchaAnswerInput) {
+      captchaAnswerInput.value = String(answer);
+    }
+
+    const captchaInput = document.getElementById('captcha') as HTMLInputElement;
+    if (captchaInput) captchaInput.value = '';
+  }
+
+  generateCaptcha();
+
+  // Form submission
+  const form = document.getElementById('recipe-form') as HTMLFormElement;
+  const submitButton = form?.querySelector(
+    'button[type="submit"]'
+  ) as HTMLButtonElement;
+
+  // Store original button content for restoration
+  const originalButtonContent: Node[] = [];
+  if (submitButton) {
+    Array.from(submitButton.childNodes).forEach((node) => {
+      originalButtonContent.push(node.cloneNode(true));
+    });
+  }
+
+  // Create loading spinner SVG
+  function createLoadingSpinner(): SVGSVGElement {
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'w-5 h-5 animate-spin');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('viewBox', '0 0 24 24');
+
+    const circle = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+    );
+    circle.setAttribute('class', 'opacity-25');
+    circle.setAttribute('cx', '12');
+    circle.setAttribute('cy', '12');
+    circle.setAttribute('r', '10');
+    circle.setAttribute('stroke', 'currentColor');
+    circle.setAttribute('stroke-width', '4');
+
+    const pathEl = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'path'
+    );
+    pathEl.setAttribute('class', 'opacity-75');
+    pathEl.setAttribute('fill', 'currentColor');
+    pathEl.setAttribute(
+      'd',
+      'M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+    );
+
+    svg.appendChild(circle);
+    svg.appendChild(pathEl);
+    return svg;
+  }
+
+  // Build a recipe JSON object from the current form state — sent as a
+  // single `recipe` field to /api/import?stage=submit.
+  function collectRecipeFromForm(): Record<string, unknown> {
+    const get = (id: string): string =>
+      (
+        document.getElementById(id) as
+          | HTMLInputElement
+          | HTMLTextAreaElement
+          | null
+      )?.value.trim() ?? '';
+    const num = (id: string): number | null => {
+      const v = get(id);
+      if (!v) return null;
+      const n = parseInt(v, 10);
+      return Number.isFinite(n) ? n : null;
+    };
+
+    const ingredients: Array<{ amount: string; name: string }> = [];
+    document.querySelectorAll('.ingredient-row').forEach((row) => {
+      const amount =
+        (
+          row.querySelector(
+            'input[name^="ingredient_amount_"]'
+          ) as HTMLInputElement | null
+        )?.value.trim() ?? '';
+      const name =
+        (
+          row.querySelector(
+            'input[name^="ingredient_name_"]'
+          ) as HTMLInputElement | null
+        )?.value.trim() ?? '';
+      if (name) ingredients.push({ amount, name });
+    });
+
+    const steps: string[] = [];
+    document.querySelectorAll('.step-row textarea').forEach((ta) => {
+      const v = (ta as HTMLTextAreaElement).value.trim();
+      if (v) steps.push(v);
+    });
+
+    const tagsInput = document.getElementById(
+      'selected_tags'
+    ) as HTMLInputElement | null;
+    const tags = tagsInput?.value
+      ? tagsInput.value
+          .split(',')
+          .map((t) => t.trim())
+          .filter(Boolean)
+      : [];
+
+    const sourceName = get('source_name');
+    const sourceUrl = get('source_url');
+
+    const scrapedImageUrlInput = document.getElementById(
+      'scraped_image_url'
+    ) as HTMLInputElement | null;
+
+    return {
+      title: get('title'),
+      description: get('description'),
+      prep_time: num('prep_time'),
+      cook_time: num('cook_time'),
+      servings: num('servings'),
+      ingredients,
+      steps,
+      tags,
+      source_name: sourceName || null,
+      source_url: sourceUrl || null,
+      notes: get('notes') || null,
+      image_url: scrapedImageUrlInput?.value.trim() || null,
+    };
+  }
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // An image is required: either an uploaded file or an image URL
+      // carried over from the preview stage.
+      const imageInput = document.getElementById(
+        'image'
+      ) as HTMLInputElement | null;
+      const hasUploadedImage = imageInput?.files && imageInput.files.length > 0;
+      const scrapedImageUrlInput = document.getElementById(
+        'scraped_image_url'
+      ) as HTMLInputElement | null;
+      const hasScrapedImage =
+        scrapedImageUrlInput?.value && scrapedImageUrlInput.value.trim() !== '';
+      if (!hasUploadedImage && !hasScrapedImage) {
+        showMessage(
+          'A recipe photo is required. Please upload an image.',
+          'error'
+        );
+        return;
+      }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = '';
+        submitButton.appendChild(createLoadingSpinner());
+        submitButton.appendChild(document.createTextNode(' Submitting...'));
+      }
+
+      try {
+        const formData = new FormData();
+        formData.append('recipe', JSON.stringify(collectRecipeFromForm()));
+        formData.append(
+          'author_name',
+          (document.getElementById('author_name') as HTMLInputElement).value
+        );
+        formData.append(
+          'captcha',
+          (document.getElementById('captcha') as HTMLInputElement).value
+        );
+        formData.append(
+          'captcha_answer',
+          (document.getElementById('captcha_answer') as HTMLInputElement).value
+        );
+        const honeypot = (
+          form.querySelector('input[name="website"]') as HTMLInputElement | null
+        )?.value;
+        if (honeypot) formData.append('website', honeypot);
+        if (hasUploadedImage && imageInput?.files?.[0]) {
+          formData.append('image', imageInput.files[0]);
+        } else if (scrapedImageUrlInput?.value) {
+          formData.append('image_url', scrapedImageUrlInput.value);
+        }
+
+        const response = await fetch('/api/import?stage=submit', {
+          method: 'POST',
+          body: formData,
+        });
+
+        let result;
+        try {
+          result = await response.json();
+        } catch {
+          showMessage('Submission failed. Please try again.', 'error');
+          generateCaptcha();
+          return;
+        }
+
+        if (!response.ok) {
+          const errorMessages =
+            result.errors?.join(', ') ||
+            result.error ||
+            result.detail ||
+            'Submission failed';
+          showMessage(errorMessages, 'error');
+          generateCaptcha();
+        } else {
+          const successMsg = result.prUrl
+            ? `Recipe submitted! PR opened: ${result.prUrl}`
+            : result.message || 'Recipe submitted successfully!';
+          showMessage(successMsg, 'success');
+          form.reset();
+
+          // Reset image preview
+          if (uploadPlaceholder && imagePreview) {
+            uploadPlaceholder.classList.remove('hidden');
+            imagePreview.classList.add('hidden');
+          }
+
+          // Reset tag selections
+          selectedTags.clear();
+          document.querySelectorAll('.tag-pill').forEach((pill) => {
+            updatePillStyle(pill as HTMLElement, false);
+          });
+          if (selectedTagsInput) {
+            selectedTagsInput.value = '';
+          }
+
+          // Reset ingredient and step rows
+          if (ingredientsContainer) {
+            ingredientsContainer.textContent = '';
+            ingredientIndex = 0;
+            ingredientsContainer.appendChild(createIngredientRow());
+          }
+          if (stepsContainer) {
+            stepsContainer.textContent = '';
+            stepIndex = 0;
+            stepsContainer.appendChild(createStepRow());
+          }
+
+          // Regenerate CAPTCHA
+          generateCaptcha();
+
+          // Reset notes counter
+          if (notesCount) {
+            notesCount.textContent = '0';
+          }
+        }
+      } catch (error) {
+        console.error('Submission error:', error);
+        showMessage(
+          'Network error. Please check your connection and try again.',
+          'error'
+        );
+        generateCaptcha();
+      } finally {
+        // Restore button state
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = '';
+          originalButtonContent.forEach((node) => {
+            submitButton.appendChild(node.cloneNode(true));
+          });
+        }
+      }
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // Import from URL functionality
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  const importUrlInput = document.getElementById(
+    'import_url'
+  ) as HTMLInputElement;
+  const importBtn = document.getElementById('import-btn') as HTMLButtonElement;
+  const importIcon = document.getElementById('import-icon');
+  const importSpinner = document.getElementById('import-spinner');
+  const importBtnText = document.getElementById('import-btn-text');
+
+  /** Shape of recipe data returned by /api/import?stage=preview */
+  interface ImportedRecipe {
+    title: string;
+    description?: string | null;
+    prep_time?: number | null;
+    cook_time?: number | null;
+    servings?: number | null;
+    ingredients: Array<{ amount: string; name: string }>;
+    steps: string[];
+    tags?: string[];
+    source_name?: string | null;
+    source_url?: string | null;
+    image_url?: string | null;
+  }
+
+  function setImportLoading(loading: boolean): void {
+    if (!importBtn || !importIcon || !importSpinner || !importBtnText) return;
+    importBtn.disabled = loading;
+    if (loading) {
+      importIcon.classList.add('hidden');
+      importSpinner.classList.remove('hidden');
+      importBtnText.textContent = 'Importing...';
+    } else {
+      importIcon.classList.remove('hidden');
+      importSpinner.classList.add('hidden');
+      importBtnText.textContent = 'Import';
+    }
+  }
+
+  function setFieldValue(
+    fieldId: string,
+    value: string | number | null | undefined
+  ): void {
+    const field = document.getElementById(fieldId) as
+      | HTMLInputElement
+      | HTMLTextAreaElement
+      | null;
+    if (field && value !== undefined && value !== null && value !== '') {
+      field.value = String(value);
+      field.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }
+
+  /** Sync the visible tag pills with the imported tag list. */
+  function applyImportedTags(tags: string[] | undefined): void {
+    if (!tags || !selectedTagsInput) return;
+    selectedTags.clear();
+    for (const t of tags) {
+      const tag = t.trim().toLowerCase();
+      if (AVAILABLE_TAGS.includes(tag)) selectedTags.add(tag);
+    }
+    document.querySelectorAll('.tag-pill').forEach((pill) => {
+      const el = pill as HTMLElement;
+      const tag = el.dataset.tag;
+      updatePillStyle(el, !!(tag && selectedTags.has(tag)));
+    });
+    selectedTagsInput.value = Array.from(selectedTags).join(',');
+  }
+
+  /** Fill the form from an imported recipe (Claude's preview output). */
+  function populateForm(data: ImportedRecipe): void {
+    setFieldValue('title', data.title);
+    setFieldValue('description', data.description ?? '');
+    setFieldValue('prep_time', data.prep_time ?? '');
+    setFieldValue('cook_time', data.cook_time ?? '');
+    setFieldValue('servings', data.servings ?? '');
+    setFieldValue('source_name', data.source_name ?? '');
+    setFieldValue('source_url', data.source_url ?? '');
+
+    if (ingredientsContainer && data.ingredients?.length) {
+      ingredientsContainer.textContent = '';
+      ingredientIndex = 0;
+      for (const ing of data.ingredients) {
+        const row = createIngredientRow();
+        const amount = row.querySelector(
+          'input[name^="ingredient_amount_"]'
+        ) as HTMLInputElement | null;
+        const name = row.querySelector(
+          'input[name^="ingredient_name_"]'
+        ) as HTMLInputElement | null;
+        if (amount) amount.value = ing.amount ?? '';
+        if (name) name.value = ing.name ?? '';
+        ingredientsContainer.appendChild(row);
+      }
+    }
+
+    if (stepsContainer && data.steps?.length) {
+      stepsContainer.textContent = '';
+      stepIndex = 0;
+      for (const step of data.steps) {
+        const row = createStepRow();
+        const ta = row.querySelector('textarea') as HTMLTextAreaElement | null;
+        if (ta) ta.value = step;
+        stepsContainer.appendChild(row);
+      }
+    }
+
+    applyImportedTags(data.tags);
+
+    if (data.image_url) {
+      if (previewImg && uploadPlaceholder && imagePreview) {
+        previewImg.src = data.image_url;
+        uploadPlaceholder.classList.add('hidden');
+        imagePreview.classList.remove('hidden');
+      }
+      let urlInput = document.getElementById(
+        'scraped_image_url'
+      ) as HTMLInputElement | null;
+      if (!urlInput) {
+        urlInput = document.createElement('input');
+        urlInput.type = 'hidden';
+        urlInput.id = 'scraped_image_url';
+        urlInput.name = 'scraped_image_url';
+        form?.appendChild(urlInput);
+      }
+      urlInput.value = data.image_url;
+    }
+  }
+
+  async function handleImport(): Promise<void> {
+    if (!importUrlInput) return;
+    const url = importUrlInput.value.trim();
+    if (!url) {
+      showMessage('Please enter a URL to import from', 'error');
+      return;
+    }
+    try {
+      new URL(url);
+    } catch {
+      showMessage('Please enter a valid URL', 'error');
+      return;
+    }
+
+    setImportLoading(true);
+    try {
+      const response = await fetch('/api/import?stage=preview', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url }),
+      });
+      let result: Record<string, unknown>;
+      try {
+        result = await response.json();
+      } catch {
+        showMessage('Failed to import recipe. Please try again.', 'error');
+        return;
+      }
+
+      if (!response.ok) {
+        const msg =
+          (result.detail as string | undefined) ||
+          (result.error as string | undefined) ||
+          'Failed to import recipe';
+        showMessage(msg, 'error');
+        return;
+      }
+
+      populateForm(result as unknown as ImportedRecipe);
+      showMessage('Recipe imported. Review and submit when ready.', 'success');
+      importUrlInput.value = '';
+    } catch (error) {
+      console.error('Import error:', error);
+      showMessage(
+        'Network error. Please check your connection and try again.',
+        'error'
+      );
+    } finally {
+      setImportLoading(false);
+    }
+  }
+
+  if (importBtn) importBtn.addEventListener('click', handleImport);
+  if (importUrlInput) {
+    importUrlInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleImport();
+      }
+    });
+  }
+
+  // Message display helper
+  function showMessage(message: string, type: 'success' | 'error') {
+    // Remove any existing message
+    const existingMsg = document.getElementById('form-message');
+    if (existingMsg) existingMsg.remove();
+
+    const msgDiv = document.createElement('div');
+    msgDiv.id = 'form-message';
+    msgDiv.className = `fixed bottom-4 right-4 max-w-md p-4 rounded-xl shadow-lg z-50 ${
+      type === 'success'
+        ? 'bg-ctp-green/20 border border-ctp-green text-ctp-green'
+        : 'bg-ctp-red/20 border border-ctp-red text-ctp-red'
+    }`;
+    msgDiv.textContent = message;
+
+    document.body.appendChild(msgDiv);
+
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      msgDiv.remove();
+    }, 5000);
+  }
+</script>
