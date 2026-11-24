@@ -1,6 +1,6 @@
 ---
 title: 'Crispy Chili Beef Noodles'
-image: 'crispy-chili-beef-noodles.svg'
+image: 'crispy-chili-beef-noodles.webp'
 author: 'Jonas'
 prep_time: 10
 cook_time: 30
