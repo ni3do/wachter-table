@@ -80,6 +80,16 @@ const UNIT_ALIASES: Record<string, string> = {
   sprigs: 'sprig',
   // Head
   heads: 'head',
+  // German units (keep German display form)
+  el: 'EL',
+  tl: 'TL',
+  prise: 'Prise',
+  prisen: 'Prise',
+  bund: 'Bund',
+  dose: 'Dose',
+  dosen: 'Dose',
+  zehe: 'Zehe',
+  zehen: 'Zehe',
   // Large/Medium/Small (normalize to singular)
   large: 'large',
   medium: 'medium',

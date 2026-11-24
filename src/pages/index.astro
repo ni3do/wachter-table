@@ -35,7 +35,10 @@ function extractIngredients(body: string): string {
       heading === 'steps' ||
       heading === 'instructions' ||
       heading === 'directions' ||
-      heading === 'method'
+      heading === 'method' ||
+      heading === 'zubereitung' ||
+      heading === 'anleitung' ||
+      heading === 'schritte'
     ) {
       continue;
     }

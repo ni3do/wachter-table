@@ -72,7 +72,10 @@ function parseRecipeContent(content: string) {
       headingLower === 'steps' ||
       headingLower === 'instructions' ||
       headingLower === 'directions' ||
-      headingLower === 'method'
+      headingLower === 'method' ||
+      headingLower === 'zubereitung' ||
+      headingLower === 'anleitung' ||
+      headingLower === 'schritte'
     ) {
       // Parse numbered steps
       const stepMatches = body.match(/^\d+\.\s+.+$/gm);

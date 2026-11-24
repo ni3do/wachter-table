@@ -1,5 +1,5 @@
 ---
-title: 'Crispy Chili Beef Noodles'
+title: 'Knusprige Chili-Rindfleisch-Nudeln'
 image: 'crispy-chili-beef-noodles.webp'
 author: 'Jonas'
 prep_time: 10
@@ -10,53 +10,53 @@ source:
   name: 'Meal Prep Manual'
   url: 'https://mealprepmanual.com/crispy-chili-beef-noodles/'
 notes: |
-  Allergens: contains soy and wheat (soy sauce, oyster sauce, lo mein noodles; gochujang often contains wheat) and molluscs (oyster sauce). Some gochujang also contains sesame — check the label.
-  For gluten-free, use rice noodles, tamari or gluten-free soy sauce, and gluten-free oyster sauce and gochujang.
-  The sauce water should be the starchy water from soaking or cooking the noodles — it helps the sauce thicken.
-  A squeeze of lemon after reheating in the microwave brightens it; pack a lemon wedge with each portion if you like.
-  Want more heat? Add extra gochujang to taste.
+  Allergene: enthält Soja und Weizen (Sojasauce, Austernsauce, Lo-Mein-Nudeln; Gochujang enthält oft Weizen) sowie Weichtiere (Austernsauce). Manche Gochujang enthalten auch Sesam – Etikett prüfen.
+  Glutenfrei: Reisnudeln, Tamari oder glutenfreie Sojasauce sowie glutenfreie Austernsauce und Gochujang verwenden.
+  Für die Sauce das stärkehaltige Wasser vom Einweichen oder Kochen der Nudeln nehmen – es bindet die Sauce.
+  Ein Spritzer Zitrone nach dem Aufwärmen in der Mikrowelle macht das Gericht frischer; nach Belieben zu jeder Portion einen Zitronenschnitz einpacken.
+  Mehr Schärfe? Nach Geschmack zusätzlich Gochujang dazugeben.
 ---
 
-## Stir fry
+## Pfanne
 
-- `900g` lean ground beef (93/7)
-- `113g` carrots
-- `100g` green onions (1 bunch)
-- `225g` baby broccoli (regular broccoli is fine)
-- `180g` shredded cabbage (coleslaw mix works as a shortcut)
-- `4` cloves garlic, minced
-- `3 tbsp` oil
-- `1 tsp` white pepper
-- `2 tsp` paprika
-- `225g` lo mein noodles (rice noodles for gluten-free)
-- `5` lemon wedges (optional, for garnish)
+- `900g` mageres Rindshackfleisch (ca. 7 % Fett)
+- `113g` Rüebli
+- `100g` Frühlingszwiebeln (1 Bund)
+- `225g` Broccolini (normaler Broccoli geht auch)
+- `180g` Weisskohl, in feinen Streifen (fertiger Coleslaw-Mix spart Zeit)
+- `4` Knoblauchzehen, fein gehackt
+- `3 EL` Öl
+- `1 TL` weisser Pfeffer
+- `2 TL` Paprika
+- `225g` Lo-Mein-Nudeln (für glutenfrei: Reisnudeln)
+- `5` Zitronenschnitze (optional, zum Garnieren)
 
 ## Sauce
 
-- `2 tbsp` honey
-- `3 tbsp` soy sauce
-- `2 tbsp` gochujang
-- `3 tbsp` oyster sauce
-- `120ml` hot starchy noodle water
+- `2 EL` Honig
+- `3 EL` Sojasauce
+- `2 EL` Gochujang
+- `3 EL` Austernsauce
+- `120ml` heisses, stärkehaltiges Nudelwasser
 
-## Steps
+## Zubereitung
 
-1. **Noodles:** Cook the noodles according to the package (or soak rice noodles in hot water). Reserve `120ml` of the starchy soaking or cooking water for the sauce.
+1. **Nudeln:** `225g` Nudeln nach Packungsangabe kochen (Reisnudeln in heissem Wasser einweichen). `120ml` vom stärkehaltigen Koch- oder Einweichwasser für die Sauce aufbewahren.
 
-2. **Veg prep:** Separate the green onions into white and green parts. Thinly slice the whites and cut the greens into `2–3 cm` pieces. Cut the broccoli into bite-sized pieces, peel the carrots into ribbons, mince the garlic, and measure out the cabbage. Do all of this before you start cooking — it goes fast.
+2. **Gemüse vorbereiten:** `100g` Frühlingszwiebeln in weisse und grüne Teile trennen. Die weissen Teile in feine Ringe schneiden, die grünen in `2–3 cm` lange Stücke. `225g` Broccolini in mundgerechte Stücke schneiden, `113g` Rüebli mit dem Sparschäler in Streifen hobeln, `4` Knoblauchzehen fein hacken und `180g` Weisskohl bereitstellen. Alles vorbereiten, bevor du mit dem Kochen beginnst – danach geht es schnell.
 
-3. **Beef:** Heat `2 tbsp` of the oil in a large pan over high heat. Add the beef, spread it across the bottom, and leave a few gaps so steam can escape. Let it brown deeply and turn crispy.
+3. **Rindfleisch:** `2 EL` Öl in einer grossen Pfanne bei hoher Hitze erhitzen. `900g` Rindshackfleisch dazugeben, am Pfannenboden verteilen und ein paar Lücken lassen, damit der Dampf entweichen kann. Kräftig anbraten, bis es braun und knusprig ist.
 
-4. After a few minutes, add the white pepper, paprika, and salt to taste. Stir and break the beef into very small pieces. When it's done, take it out of the pan and set aside.
+4. Nach ein paar Minuten `1 TL` weissen Pfeffer, `2 TL` Paprika und Salz nach Geschmack dazugeben. Umrühren und das Fleisch in sehr kleine Stücke zerteilen. Wenn es fertig ist, aus der Pfanne nehmen und beiseitestellen.
 
-5. **Vegetables:** Add the remaining `1 tbsp` oil to the pan over medium-high heat. Add the green onion whites, broccoli, and carrots. Toss and sear 1–2 minutes, then add the cabbage. Cook a few more minutes until you have some colour and the vegetables have slightly softened.
+5. **Gemüse:** Die restlichen `1 EL` Öl bei mittlerer bis hoher Hitze in die Pfanne geben. Die weissen Frühlingszwiebelringe, `225g` Broccolini und `113g` Rüebli dazugeben. 1–2 Minuten schwenken und anbraten, dann `180g` Weisskohl dazugeben. Noch einige Minuten weiterbraten, bis das Gemüse etwas Farbe hat und leicht weich ist.
 
-6. Return the beef to the pan and stir to combine.
+6. Das Rindfleisch zurück in die Pfanne geben und alles vermischen.
 
-7. **Sauce:** Stir together the soy sauce, oyster sauce, gochujang, honey, and the reserved starchy noodle water.
+7. **Sauce:** `3 EL` Sojasauce, `3 EL` Austernsauce, `2 EL` Gochujang, `2 EL` Honig und die aufbewahrten `120ml` Nudelwasser verrühren.
 
-8. Add the noodles and sauce to the pan and mix carefully so the noodles don't break.
+8. Die `225g` gekochten Nudeln und die Sauce in die Pfanne geben und vorsichtig mischen, damit die Nudeln nicht brechen.
 
-9. Add the garlic and green onion tops last and cook 1–2 minutes. Taste and adjust the seasoning.
+9. Zum Schluss `4` gehackte Knoblauchzehen und die grünen Frühlingszwiebelstücke dazugeben und 1–2 Minuten mitbraten. Abschmecken und bei Bedarf nachwürzen.
 
-10. **Plate:** Divide into 5 containers. A squeeze of lemon after reheating in the microwave is a nice touch — pack a lemon wedge with each portion if you like.
+10. **Anrichten:** Auf `5` Behälter verteilen. Ein Spritzer Zitrone nach dem Aufwärmen in der Mikrowelle passt gut – nach Belieben `1` Zitronenschnitz pro Portion dazulegen.
